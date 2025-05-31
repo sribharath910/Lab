@@ -60,6 +60,8 @@ for k in k_values:
     plt.grid(True)
     plt.show()
 </details>
+
+```python
 ## 📈 Locally Weighted Regression (LWR) in Python
 
 <details>
@@ -99,7 +101,7 @@ plt.title('Locally Weighted Regression', fontsize=14)
 plt.legend(fontsize=10)
 plt.grid(alpha=0.3)
 plt.show()
-</details>
+</details>```
 
 ## 🔍 Linear and Polynomial Regression in Python
 
@@ -175,7 +177,7 @@ if __name__ == "__main__":
     print("Demonstrating Linear Regression and Polynomial Regression\n")
     linear_regression_california()
     polynomial_regression_auto_mpg()
-</details>
+</details>```
 
 ## 🌳 Decision Tree Classifier on Breast Cancer Dataset
 
@@ -212,7 +214,7 @@ plt.figure(figsize=(12,8))
 tree.plot_tree(clf, filled=True, feature_names=data.feature_names, class_names=data.target_names)
 plt.title("Decision Tree - Breast Cancer Dataset")
 plt.show()
-</details>
+</details>```
 
 ## 🤖 Face Recognition using Naive Bayes on Olivetti Faces Dataset
 
@@ -256,7 +258,7 @@ for ax, image, label, prediction in zip(axes.ravel(), X_test, y_test, y_pred):
     ax.axis('off')
 
 plt.show()
-</details>
+</details>```
 
 ## 🔬 K-Means Clustering on Breast Cancer Dataset
 
@@ -321,5 +323,5 @@ plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
 plt.legend(title="Cluster")
 plt.show()
-</details>
+</details>```
 
