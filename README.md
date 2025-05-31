@@ -59,7 +59,7 @@ for k in k_values:
     plt.legend()
     plt.grid(True)
     plt.show()
-</details>
+</details>```
 
 ```python
 ## 📈 Locally Weighted Regression (LWR) in Python
