@@ -1,33 +1,29 @@
-# Lab5
+## 🧠 k-Nearest Neighbors (k-NN) Classifier in Python
+
+<details>
+<summary>🔽 Click to view code</summary>
+
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import Counter
 
 data = np.random.rand(100)
-
 labels = ["Class1" if x <= 0.5 else "Class2" for x in data[:50]]
-
 
 def euclidean_distance(x1, x2):
     return abs(x1 - x2)
 
-
 def knn_classifier(train_data, train_labels, test_point, k):
     distances = [(euclidean_distance(test_point, train_data[i]), train_labels[i]) for i in range(len(train_data))]
-
     distances.sort(key=lambda x: x[0])
     k_nearest_neighbors = distances[:k]
-
     k_nearest_labels = [label for _, label in k_nearest_neighbors]
-
     return Counter(k_nearest_labels).most_common(1)[0][0]
-
 
 train_data = data[:50]
 train_labels = labels
-
 test_data = data[50:]
-
 k_values = [1, 2, 3, 4, 5, 20, 30]
 
 print("--- k-Nearest Neighbors Classification ---")
@@ -40,7 +36,6 @@ for k in k_values:
     print(f"Results for k = {k}:")
     classified_labels = [knn_classifier(train_data, train_labels, test_point, k) for test_point in test_data]
     results[k] = classified_labels
-
     for i, label in enumerate(classified_labels, start=51):
         print(f"Point x{i} (value: {test_data[i - 51]:.4f}) is classified as {label}")
     print("\n")
@@ -64,12 +59,15 @@ for k in k_values:
     plt.legend()
     plt.grid(True)
     plt.show()
+</details>
+## 📈 Locally Weighted Regression (LWR) in Python
 
-#lab6
+<details>
+<summary>🔽 Click to view code</summary>
 
+```python
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 def gaussian_kernel(x, xi, tau):
     return np.exp(-np.sum((x - xi) ** 2) / (2 * tau ** 2))
@@ -101,12 +99,14 @@ plt.title('Locally Weighted Regression', fontsize=14)
 plt.legend(fontsize=10)
 plt.grid(alpha=0.3)
 plt.show()
+</details>
 
+## 🔍 Linear and Polynomial Regression in Python
 
+<details>
+<summary>🔽 Click to view code</summary>
 
-
-#lab7
-
+```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -175,11 +175,14 @@ if __name__ == "__main__":
     print("Demonstrating Linear Regression and Polynomial Regression\n")
     linear_regression_california()
     polynomial_regression_auto_mpg()
+</details>
 
+## 🌳 Decision Tree Classifier on Breast Cancer Dataset
 
-#lab8
+<details>
+<summary>🔽 Click to view code</summary>
 
-# Importing necessary libraries
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_breast_cancer
@@ -209,10 +212,14 @@ plt.figure(figsize=(12,8))
 tree.plot_tree(clf, filled=True, feature_names=data.feature_names, class_names=data.target_names)
 plt.title("Decision Tree - Breast Cancer Dataset")
 plt.show()
+</details>
 
+## 🤖 Face Recognition using Naive Bayes on Olivetti Faces Dataset
 
-#lab9
+<details>
+<summary>🔽 Click to view code</summary>
 
+```python
 import numpy as np
 from sklearn.datasets import fetch_olivetti_faces
 from sklearn.model_selection import train_test_split, cross_val_score
@@ -249,11 +256,14 @@ for ax, image, label, prediction in zip(axes.ravel(), X_test, y_test, y_pred):
     ax.axis('off')
 
 plt.show()
+</details>
 
+## 🔬 K-Means Clustering on Breast Cancer Dataset
 
+<details>
+<summary>🔽 Click to view code</summary>
 
-#lab10
-
+```python
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -311,3 +321,5 @@ plt.xlabel('Principal Component 1')
 plt.ylabel('Principal Component 2')
 plt.legend(title="Cluster")
 plt.show()
+</details>
+
